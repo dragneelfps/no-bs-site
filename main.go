@@ -8,10 +8,10 @@ type Blog struct {
 
 func main() {
 	r := gin.New()
-	r.Static("/static", "../../static")
+	r.Static("/static", "./static")
 
 	r.GET("/", func(c *gin.Context) {
-		c.File("../../static/index.html")
+		c.File("./static/index.html")
 	})
 
 	r.GET("/api/blogs", func(c *gin.Context) {
